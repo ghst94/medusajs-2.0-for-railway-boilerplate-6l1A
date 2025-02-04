@@ -1,7 +1,5 @@
 import React from "react"
-
 import UnderlineLink from "@modules/common/components/interactive-link"
-
 import AccountNav from "../components/account-nav"
 import { HttpTypes } from "@medusajs/types"
 
@@ -10,10 +8,7 @@ interface AccountLayoutProps {
   children: React.ReactNode
 }
 
-const AccountLayout: React.FC<AccountLayoutProps> = ({
-  customer,
-  children,
-}) => {
+const AccountLayout: React.FC<AccountLayoutProps> = ({ customer, children }) => {
   return (
     <div className="flex-1 small:py-12" data-testid="account-page">
       <div className="flex-1 content-container h-full max-w-5xl mx-auto bg-white flex flex-col">
@@ -30,15 +25,20 @@ const AccountLayout: React.FC<AccountLayoutProps> = ({
             </span>
           </div>
           <div>
-            <UnderlineLink href="https://kannabis.io/support">
+            <UnderlineLink href="#support">
               Customer Service
             </UnderlineLink>
           </div>
         </div>
+      </div>
+
+      {/* Add an ID to the support section to make it scrollable */}
+      <div id="support" className="mt-12 p-8 bg-gray-100">
+        <h2 className="text-2xl font-semibold">Support</h2>
+        <p>Here you can provide FAQs or other support-related content.</p>
       </div>
     </div>
   )
 }
 
 export default AccountLayout
-
