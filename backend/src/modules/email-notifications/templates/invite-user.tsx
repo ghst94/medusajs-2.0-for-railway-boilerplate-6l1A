@@ -40,13 +40,13 @@ export const InviteUserEmail = ({
       <Section className="mt-[32px]">
         <Img
           src="https://user-images.githubusercontent.com/59018053/229103275-b5e482bb-4601-46e6-8142-244f531cebdb.svg"
-          alt="Medusa"
+          alt="KANNABIS"
           className="mx-auto w-28"
         />
       </Section>
       <Section className="text-center">
         <Text className="text-black text-[14px] leading-[24px]">
-          You&apos;ve been invited to be an administrator on <strong>Medusa</strong>.
+          You&apos;ve been invited to be an administrator on <strong>KANNABIS</strong>.
         </Text>
         <Section className="mt-4 mb-[32px]">
           <Button
