@@ -1,0 +1,15 @@
+---
+const res = await fetch('/api/products');
+const { products } = await res.json();
+---
+
+<section class="product-grid">
+  {products.map((product) => (
+    <div class="product-card">
+      <img src={product.thumbnail} alt={product.title} />
+      <h2>{product.title}</h2>
+      <p>{product.description}</p>
+      <span>${product.variants[0].prices[0].amount / 100}</span>
+    </div>
+  ))}
+</section>
